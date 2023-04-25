@@ -2,24 +2,28 @@
 <html lang="en">
 
 <head>
-  <title>&lt;model-viewer&gt; example</title>
+  <title>EduTopia - AR Learning At Home</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/demo-styles.css">
+  <link rel="stylesheet" href="./css/demostyles.css">
 
+  <!-- The following libraries and polyfills are recommended to maximize browser support -->
+  <!-- NOTE: you must adjust the paths as appropriate for your project -->
+
+  <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
   <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
 
 </head>
 
 <body>
   <div id="card">
-    <model-viewer id="hotspot-demo" ar ar-modes="webxr" touch-action="pan-y" src="images/human_skeleton_.glb"
+    <model-viewer id="hotspot-demo" ar ar-modes="webxr" touch-action="pan-y" src="./img/human_skeleton_.glb"
       ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
-      poster="images/human_skeleton.webp" alt="A 3D model of an skeleton" shadow-intensity="1" camera-controls
+      poster="./img/human_skeleton.webp" alt="A 3D model of an skeleton" shadow-intensity="1" camera-controls
       auto-rotate ar>
-
+      <!-- <button class="hotspot" slot="hotspot-visor" data-position="0 1.75 0.35" data-normal="0 0 1"></button> -->
       <button class="hover" class="hotspot" slot="hotspot-hand" data-position="0 6.93 0.1" data-normal="-0.73 0.05 0.69">
         <div class="annotation">
           <!-- Skull -->
@@ -62,16 +66,16 @@
     </model-viewer>
   </div>
   <div id="card">
-    <model-viewer src="images/microscope.glb"
+    <model-viewer src="./img/microscope.glb"
       ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
-      poster="images/microscope.png" alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate
+      poster="./img/microscope.png" alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate
       ar>
     </model-viewer>
   </div>
   <div id="card">
-    <model-viewer src="images/realistic_human_heart.glb"
+    <model-viewer src="./img/realistic_human_heart.glb"
       ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
-      poster="images/heart.jpg" alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar>
+      poster="./img/heart.jpg" alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar>
     </model-viewer>
   </div>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
